@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 1. Дан код:
+
+        // var a = 1, b = 1, c, d;
+
+        // c = ++a; alert(c);       // 2  Сначало a увеличиваем на 1 затем присваиваем c(префиксная форма)
+        // d = b++; alert(d);       // 1 Сначало мы пер-ой d присва-ем зна-е пер-ой b, которая =1 и d стан-ся равна 1.А потом увеличиваем значение b на 1
+        // c = (2 + ++a); alert(c); // 5  Не правильно c = 4, а не 5. a = 1, увеличиваем a на 1 = 2 и + 2 = 4
+        // d = (2 + b++); alert(d); // 4 Не правильно, ответ не 4 а 3.b = 1 + 2 = 3.Только после сложения увел-ем b на 1 (постфиксная форма записи)
+        // alert(a);                // 3 2 раза увеличили на 1
+        // alert(b);                // 3 2 раза увеличили на 1
+
+        // Почему код даёт именно такие результаты ?
+
+
+        // 2. Чему будет равен x в примере ниже ?
+
+        // var a = 2;
+        // var x = 1 + (a *= 2);
+        // console.log(x); // Ответ: x = 5.Потому что a *= 2 это a = a * 2;
+
+        // 3. Объявить две целочисленные переменные a и b и задать им 
+        // произвольные начальные значения.Затем написать скрипт, который
+        //  работает по следующему принципу:
+
+        // если a и b положительные, вывести их разность;
+        // если а и b отрицательные, вывести их произведение;
+        // если а и b разных знаков, вывести их сумму; ноль можно считать
+        // положительным числом.
+
+        // let a = +prompt("Введите число a", "1");
+        // let b = +prompt("Введите число b", "2");
+        // let result;
+
+
+        // function getScope(a, b) {
+        //     if (a > 0 && b > 0) {
+        //         result = a - b;
+        //         return `a - b = ${result}`;
+        //     } else if (a < 0 && b < 0) {
+        //         result = a * b;
+        //         return `a * b = ${result}`;
+        //     } else {
+        //         result = a + b;
+        //         return `a + b = ${result}`;
+        //     }
+        //     return;
+        // }
+        // alert(getScope(a, b));
+
+        // 4. Присвоить переменной а значение в промежутке[0..15].
+        // С помощью оператора switch организовать вывод чисел от a до 15.
+
+        // function randomInteger(min, max) {
+
+        //     // случайное число от min до (max+1)
+        //     let a = min - 0.5 + Math.random() * (max - min + 1);
+        //     a = Math.round(a);
+
+        //     document.write(a + `<br>`);
+
+        //     switch (a) {
+        //         case 0:
+        //             document.write(0 + " ");
+        //         case 1:
+        //             document.write(1 + " ");
+        //         case 2:
+        //             document.write(2 + " ");
+        //         case 3:
+        //             document.write(3 + " ");
+        //         case 4:
+        //             document.write(4 + " ");
+        //         case 5:
+        //             document.write(5 + " ");
+        //         case 6:
+        //             document.write(6 + " ");
+        //         case 7:
+        //             document.write(7 + " ");
+        //         case 8:
+        //             document.write(8 + " ");
+        //         case 9:
+        //             document.write(9 + " ");
+        //         case 10:
+        //             document.write(10 + " ");
+        //         case 11:
+        //             document.write(11 + " ");
+        //         case 12:
+        //             document.write(12 + " ");
+        //         case 13:
+        //             document.write(13 + " ");
+        //         case 14:
+        //             document.write(14 + " ");
+        //         case 15:
+        //             document.write(15 + " ");
+        //     }
+        // }
+
+        // randomInteger(0, 15);
+
+        // 5. Реализовать основные 4 арифметические операции в виде
+        //  функций с двумя параметрами. Обязательно использовать 
+        //  оператор return.
+
+        // let a = +prompt("Введите число a", "1");
+        // let b = +prompt("Введите число b", "2");
+
+        // function sum(a, b) {
+        //     return a + b;
+        // }
+
+        // function subtraction(a, b) {
+        //     return a - b;
+        // }
+
+        // function multiply(a, b) {
+        //     return a * b;
+        // }
+
+        // function division(a, b) {
+        //     return a / b;
+        // }
+
+
+        // 6. Реализовать функцию с тремя параметрами: function 
+        // mathOperation(arg1, arg2, operation), где arg1, arg2 – значения 
+        // аргументов, operation – строка с названием операции. 
+        // В зависимости от переданного значения операции выполнить одну 
+        // из арифметических операций (использовать функции из пункта 3) 
+        // и вернуть полученное значение (использовать switch).
+
+
+        // let arg1 = +prompt("Введите первый аргумент", "1");
+        // let arg2 = +prompt("Введите второй аргумент", "2");
+        // let operation = prompt("Введите название операции", "сложение,вычитание,умножение,деление");
+
+
+
+        // function sum(arg1, arg2) {
+        //     let rezult = arg1 + arg2;
+        //     return `Операция сложения.\n${arg1} + ${arg2} = ${rezult}`;
+        // }
+
+        // function subtraction(arg1, arg2) {
+        //     let rezult = arg1 - arg2;
+        //     return `Операция вычитание.\n${arg1} - ${arg2} = ${rezult}`;
+        // }
+
+        // function multiply(arg1, arg2) {
+        //     let rezult = arg1 * arg2;
+        //     return `Операция умножение.\n${arg1} * ${arg2} = ${rezult}`;
+        // }
+
+        // function division(arg1, arg2) {
+        //     let rezult = arg1 / arg2;
+        //     return `Операция деления.\n${arg1} / ${arg2} = ${rezult}`;
+        // }
+
+        // function mathOperation(arg1, arg2, operation) {
+
+        //     if (operation == null) {
+        //         return alert("Пока");
+        //     } else {
+        //         operation = operation.toLowerCase();
+        //     }
+
+        //     switch (operation) {
+        //         case "сложение":
+        //             return alert(sum(arg1, arg2));
+        //             break;
+        //         case "вычитание":
+        //             return alert(subtraction(arg1, arg2));
+        //             break;
+        //         case "умножение":
+        //             return alert(multiply(arg1, arg2));
+        //             break;
+        //         case "деление":
+        //             return alert(division(arg1, arg2));
+        //             break;
+        //         default:
+        //             return alert("Не выбрана ни одна операция");
+
+        //     }
+        // }
+
+        // mathOperation(arg1, arg2, operation);
+
+
+
+        // 7) *Сравнить null и 0. Попробуйте объяснить результат.
+
+        // alert(null > 0);  //false       Сравнения преобразуют null в число, рассматривая его как 0.                                  
+        // alert(null < 0);  // false      Поэтому выражение (3) null >= 0 истинно, а null > 0 ложно.
+        // alert(null == 0); // false      Для нестрогого равенства == значений undefined и null действует 
+        // alert(null >= 0); // true       особое правило: эти значения ни к чему не приводятся, они равны 
+        // alert(null <= 0); // true       друг другу и не равны ничему другому. Поэтому (2) null == 0 ложно.
+
+
+        // 8) *С помощью рекурсии организовать функцию возведения числа в степень.
+        //  Формат: function power(val, pow), где val – заданное число, pow – степень.
+
+
+        // let val = +prompt("Введите чило", "2");
+        // let pow = +prompt("Введите степень", "2");
+
+        // function power(val, pow) {
+
+        //     if (pow != 1) {
+        //         return val = val * power(val, pow - 1);
+        //     } else {
+        //         return val;
+        //     }
+        // }
+        // alert(power(val, pow));
+
+    </script>
+
+</body>
+
+</html>
