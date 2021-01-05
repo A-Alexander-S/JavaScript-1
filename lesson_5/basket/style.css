@@ -1,0 +1,95 @@
+
+
+/*Обнуление*/
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
+
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.heading{
+    height: 80px;
+    width: 100%;
+    background: rgb(93, 93, 168);
+}
+#catalog{
+    flex: 1 0 auto;
+    position: relative;
+}
+.container{
+    max-width: 1000px;
+    border: 1px solid blue;
+    margin: 0 auto;
+}
+.catalog__flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.catalog__column{
+    flex: 0 1 33.333%;
+    border: 1px solid blue;
+    margin-bottom: 20px;
+}
+.catalog__item{
+    border: 1px solid blue;
+}
+.catalog__img{
+    display: block;
+    width: 80px;
+    height: 120px;
+}
+#i_btn_0{
+    background: url('img/se.jpg') 0 0/contain no-repeat;
+}
+#i_btn_1{
+    background: url('img/headPhones.jpg') 0 0/contain no-repeat;
+}
+#i_btn_2{
+    background: url('img/lenovoTab.jpg') 0 0/contain no-repeat;
+}
+.catalog__btn{
+    display: block;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    transition: 0.2s;
+}
+#c_0{
+    
+}
+footer{
+    height: 80px;
+    border: 1px solid blue;
+}
+.basket{
+    border: 1px solid blue;
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
