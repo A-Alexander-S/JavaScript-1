@@ -139,7 +139,7 @@ function showModal(event) {
 //Функция перелистывающая картинки в модальном окне
 function showBigPicture(event) {
     event.target.getAttribute('src');
-    console.log(document.getElementById('modal-img'));
+    // console.log(document.getElementById('modal-img'));
     document.getElementById('modal-img').src = event.target.getAttribute('src');
 }
 
