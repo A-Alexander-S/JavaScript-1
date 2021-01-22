@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    // 1.if (!("a" in window)) {
+    // var a = 1;
+    // }
+    // alert(a);
+    // Скорее всего ответ такой что переменная а будет не определена.
+    // Так как "a" это у нас всего лишь строка, var a = 1 находиться после условия и не имеет никакого значения
+
+
+
+    // 2.var b = function a(x) {
+    // x && a(--x);
+    // };
+    // alert(a);
+    // Наверное выведеться тело функции
+
+
+    // 3.function a(x) {
+    // return x * 2;
+    // }
+    // var a;
+    // alert(a);
+    // Выведеться тело функции, потому что а без скобок - это ссылка на функцию.
+
+
+    // 4.function b(x, y, a) {
+    // arguments[2] = 10;
+    // alert(a);
+    // }
+    // b(1, 2, 3);
+    // arguments - это так называемый псевдомассив, который в данном случае меняет значение переменной
+    // а на 10, а потом мы ее выводим.Ответ 10
+
+    // 5.function a() {
+    // alert(this);
+    // }
+    // a.call(null);
+    // Call явно устанавливает this. Выведет либо object Window либо document, то есть глобальный объект какой нибудь
+</body>
+
+</html>
