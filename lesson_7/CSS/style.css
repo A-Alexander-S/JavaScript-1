@@ -1,0 +1,209 @@
+
+
+/*Обнуление*/
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+/*--------------------*/
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+header{
+    display: flex;
+    height: 100px;
+    background: rgb(39, 140, 223);
+    font-size: 30px;
+}
+header p{
+    display: inline-block;
+    margin: auto;
+}
+.content{
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+}
+#modal_window{
+    width: 40%;
+    border: 1px black solid;
+    position: absolute;
+    left: 30%;
+    background: white;
+}
+
+.item-div__modal{
+    width: 60px;
+    height: 60px;
+}
+#modal-img{
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+}
+#big_gallery{
+    display: flex;
+    justify-content: center;
+}
+#big_gallery img{
+    height: 100px;
+    margin: 0 10px;
+}
+#close_modal{
+    background: url("../img/close.png") 0 0/ contain no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+}
+.container{
+    margin: 0 auto;
+    flex: 0 1 1000px;
+}
+.basket{
+    border: 1px black solid;
+    /* height: auto; */
+    max-height: 500px;
+    flex: 0 0 200px;
+    overflow: scroll;
+}
+.open-basket{
+    border: 1px solid black ;
+    background: rgb(101, 167, 221);
+    padding: 5px;
+    display: block;
+    text-align: center;
+}
+.basket__card__product{
+    border: 1px solid black;
+    padding: 10px;
+}
+.basket__picture{
+    
+    width: 50px;
+}
+.basket-btn__delete{
+    padding: 3px;
+    background-color: #d74806;
+    color: white;
+}
+#catalog{
+    display: flex;
+    flex: 1 0 auto;
+    border: 1px solid black;
+    flex-wrap: wrap;
+}  
+.catalog__column{
+    flex: 0 1 33.333%;
+    margin-bottom: 20px;
+}
+.card{
+    display: flex;
+    border: 1px black solid;
+}
+.card div{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.card p{
+    display: block;
+}
+.img__card{
+    display: block;
+    width: 80px;
+    height: 120px;
+    cursor: pointer;
+}
+.catalog__btn{
+    display: block;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: .5em 2em;
+    outline: none;
+    border-width: 2px 0;
+    border-style: solid none;
+    border-color: #FDBE33 #000 #D77206;
+    border-radius: 6px;
+    background: linear-gradient(#F3AE0F, #E38916) #E38916;
+    transition: 0.2s;
+}
+
+footer{
+    height: 100px;
+    background: rgb(39, 140, 223);
+}
+
+.accordeon-wrapper{
+    position: absolute;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 60%;
+    left: 20%;
+    top: 25%;
+    z-index: 1;
+    display: none;
+}
+.accordeon-section{
+
+}
+.accordeon-header{
+    background-color: #aaa;
+    padding: 20px;
+    cursor: pointer;
+}
+.accordeon-header:hover{
+    background-color: rgb(39, 140, 223);
+}
+.composition-basket{
+
+}
+.accordeon-body{
+    background-color: white;
+    height: 0;
+    overflow: hidden;
+}
+.opened{
+    height: auto;
+}
+.accordeon-body > *{
+    padding: 20px;
+}
+/* .opened .accordeon-body{
+    height: auto;
+} */
+.img_basket-modal{
+    width: 70px;
+    padding-bottom: 15px;
+}
+.delivery-address{
+
+}
+.comment{
+
+}
+.close-modal-basket{
+    background: url("../img/close.png") 0 0/ contain no-repeat;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
